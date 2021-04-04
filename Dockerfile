@@ -1,6 +1,5 @@
-#Dockerfile for Apache2
 FROM ubuntu:20.10
-
+MAINTAINER ozharkov
 RUN apt-get update
 RUN apt-get install -y apache2
 
