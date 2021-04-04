@@ -1,5 +1,5 @@
-
-FROM ubuntu:12.04
+#Dockerfile for Apache2
+FROM ubuntu:20.10
 
 RUN apt-get update
 RUN apt-get install -y apache2
