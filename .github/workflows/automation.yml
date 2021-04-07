@@ -22,7 +22,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-- name: Push to Docker Hub
+  name: Push to Docker Hub
   uses: docker/build-push-action@v1
   with:
     username: ${{ secrets.DOCKER_USERNAME }}
