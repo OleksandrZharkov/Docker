@@ -1,4 +1,4 @@
 FROM httpd:latest
-LABEL ozharkov
+LABEL Apache Web
 COPY index.html /usr/local/apache2/htdocs/
 
