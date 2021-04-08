@@ -1,0 +1,19 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: circleci/buildpack-deps:stretch
+        auth:
+          username: ozharkov
+          password: $DOCKERHUB_PASSWORD
+    steps:
+      - checkout
+      - setup_remote_docker:
+          version: 19.03.13
+
+      - run: |
+          docker build -t ozharkov/cicd:latest .
+          docker login -u ozharkov -p $DOCKERHUB_PASSWORD
+          docker push ozharkov/cicd:latest
+          echo "Build is Done"
